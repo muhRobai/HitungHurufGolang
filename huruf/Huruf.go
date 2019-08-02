@@ -6,9 +6,10 @@ import(
 )
 
 func main(){
-	sum.Sum("omama")
+	hidup1, mati2 := sum.Sum("omama")
+	fmt.Println(hidup1, mati2)
 	fmt.Println("")
 	fmt.Println("===================||==================||============")
-	sum.Sum("oasam")
-	fmt.Println("")
+	hidup, mati := sum.Sum("osama")
+	fmt.Println(hidup, mati)
 }

@@ -6,7 +6,12 @@ import (
 	
 )
 
-func Sum(text string){
+// type data struct{
+// 	hidup int
+// 	mati int
+// }
+
+func Sum(text string) (int, int){
 	var role =[]string{"a","i","u","e","o","A","I","U","E","O"}
 	var exceptRole = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
 	var rest = 0
@@ -14,7 +19,6 @@ func Sum(text string){
 	var sumExceptRest = 0
 	var txtArray = strings.Split(exceptRole,"")
 	// fmt.Println(txtArray[1])
-
 	for j := 0; j < len(role); j++ {
 		if strings.ContainsAny(text, role[j]) {
 			rest++
@@ -28,9 +32,6 @@ func Sum(text string){
 			sumExceptRest += exceptRest 
 		}
 	}
-
-	fmt.Printf("kata %v mempunyai huruf hidup %v dan huruf mati %v\n", text, rest, sumExceptRest)
-
-
-
+	
+	return rest,sumExceptRest
 }
